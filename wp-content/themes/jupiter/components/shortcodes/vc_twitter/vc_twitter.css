@@ -1,0 +1,17 @@
+/* Shortcode:Twitter Feed
+-------------------------------------------------------------------- */
+.mk-tweet-shortcode li {
+  padding-left: 25px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.mk-tweet-shortcode .tweet-icon {
+  top: 15px;
+  left: 2px;
+  position: absolute;
+}
+.mk-tweet-shortcode .tweet-icon svg {
+	height: 16px;	
+}
+.mk-twitter-shortcode {
+  margin-bottom: 20px;
+}

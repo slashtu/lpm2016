@@ -1,0 +1,70 @@
+/*
+  Horizontal
+
+  reset atom class first
+  if it doesn't exist elsewhere, just remove it
+*/
+.flip-horizontal .fold-back-horizontal,
+.flip-vertical .fold-back-vertical { transform: none; }
+
+/* 
+  Our holder has 200% width so it can fit horizontally to equal flex items 
+  By moving it negative 50% and moving flipbox-front to right we actually adjust it to correct position.
+  Prefer negative transform as a workaround for webkit issue with calculating effective width of transformed elements.
+  It breaks overflow rules and stretch page width with blank space - adding anoying horizontal scrollbar on IOS
+*/
+.mk-flipbox-holder {
+  -webkit-transform: translateX(-50%); 
+          transform: translateX(-50%); 
+}
+.mk-flipbox-front {
+  -webkit-transform: translateX(100%); 
+          transform: translateX(100%); 
+}
+
+/*
+  Horizontal
+ */
+.flip-horizontal .mk-flipbox-back {
+  -webkit-transform: rotateY(180deg); 
+          transform: rotateY(180deg); 
+}
+.flip-horizontal:hover .mk-flipbox-front {
+  -webkit-transform: translateX(100%) rotateY(-180deg);
+          transform: translateX(100%) rotateY(-180deg);
+}
+.flip-horizontal:hover .mk-flipbox-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+/*
+  Vertical
+ */
+.flip-vertical .mk-flipbox-back {
+  -webkit-transform: rotateX(180deg); 
+          transform: rotateX(180deg); 
+}
+
+.flip-vertical:hover .mk-flipbox-front {
+  -webkit-transform: translateX(100%) rotateX(-180deg);
+          transform: translateX(100%) rotateX(-180deg);
+}
+.flip-vertical:hover .mk-flipbox-back {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+
+/*
+  Button
+ */
+.mk-flipbox .mk-button-container {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/*
+  Set line-height to remove extra height from svg container div.
+*/
+.front-icon { line-height: 1rem; }

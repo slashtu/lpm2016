@@ -1,0 +1,22 @@
+/* RESET ALL ICON BACKGROUNDS */
+
+.learndash_nevigation_lesson_topics_list .list_arrow.collapse,
+.learndash .notcompleted,
+#learndash_profile .notcompleted,
+.list_arrow.expand.lesson_completed,
+.learndash_nevigation_lesson_topics_list .topic-completed span,
+.lesson_incomplete.list_arrow.expand,
+.learndash_nevigation_lesson_topics_list .topic-notcompleted span,
+.learndash .completed,
+#learndash_profile .completed,
+.learndash .topic-notcompleted span,
+#learndash_profile .list_arrow,
+#learndash_profile .list_arrow.collapse,
+.list_arrow,
+.list_arrow.expand.lesson_completed,
+.list_arrow.collapse.lesson_completed {
+    background-image: none !important; 
+    background: none !important; 
+	
+}
+

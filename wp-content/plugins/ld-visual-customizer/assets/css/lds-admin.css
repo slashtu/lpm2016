@@ -1,0 +1,69 @@
+.lds-group { 
+
+}
+
+.lds-group legend { 
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 30px 0 0 0;
+	margin: 0;
+	display: block;
+}
+
+.lds-group h3 { 
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: 1px solid #ddd;
+}
+
+.lds-group:first-child h3 { 
+	border-top: 0px !important;
+}
+
+.lds-preview { 
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	display: inline-block;
+	text-align: center;
+}
+
+.lds-theme-preview { 
+	display: none;
+}
+
+.lds-theme-preview p { 
+	font-size: 14px;
+	color: #333;
+}
+
+.lds-theme-preview p strong { 
+	color: #111;
+	display: block;
+	font-size: 18px;
+}
+
+
+.lds-activation-notice {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.lds-tab { 
+	display: none;
+}
+
+.lds-tab-active { 
+	display: block;
+}
+
+.lds-mb-60 { 
+	margin-bottom: 60px;
+}
+
+.lds-ntb { 
+	border-top: 0px !important;
+}

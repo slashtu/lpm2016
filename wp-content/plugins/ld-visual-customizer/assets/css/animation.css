@@ -1,0 +1,83 @@
+/* ============================================ */
+/* = Custom Animation for the Learndash Skins = */
+/* ============================================ */
+
+/* =========== */
+/* = Fade In = */
+/* =========== */
+
+@keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+/* Opera */
+@-o-keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+/* Firefox */
+@-moz-keyframes width {
+    from { width: 0 !important; }
+    to { width: auto; }
+}
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { width: 0 !important; }
+    to { width: auto; }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { width: 0 !important; }
+    to { width: auto; }
+}
+/* Opera */
+@-o-keyframes fadein {
+    from { width: 0 !important; }
+    to { width: auto; }
+}
+
+/*
+-webkit-animation: fadein 3s; 
+-moz-animation: fadein 3s; 
+-ms-animation: fadein 3s; 
+-o-animation: fadein 3s; 
+animation: fadein 3s;
+*/
+
+#learndash_course_content,
+#learndash_profile {
+	-webkit-animation: fadein 3s; 
+	-moz-animation: fadein 3s; 
+	-ms-animation: fadein 3s; 
+	-o-animation: fadein 3s; 
+	animation: fadein 3s;
+}
+
+.course_progress div.course_progress_blue { 
+	-webkit-animation: width 3s; 
+	-moz-animation: width 3s; 
+	-ms-animation: width 3s; 
+	-o-animation: width 3s; 
+	animation: width 3s;
+}

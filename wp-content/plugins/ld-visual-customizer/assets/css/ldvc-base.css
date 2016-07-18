@@ -1,0 +1,39 @@
+#learndash_next_prev_link a,
+input.wpProQuiz_button,
+input.wpProQuiz_button2,
+#sfwd-mark-complete input.button,
+#sfwd-mark-complete input[type="submit"],
+#learndash_mark_complete_button { 
+	background: #efefef;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #000;
+	border: 0px;
+}
+
+#learndash_next_prev_link a:hover,
+input.wpProQuiz_button:hover,
+input.wpProQuiz_button2:hover,
+#sfwd-mark-complete input.button:hover,
+#sfwd-mark-complete input[type="submit"]:hover,
+#learndash_mark_complete_button:hover { 
+	opacity: 0.8;
+}
+
+div.learndash { 
+	padding-bottom: 15px;
+}
+
+#learndash_uploaded_assignments + br + u { 
+	display: block;
+	margin-bottom: 15px;
+}
+
+.list_arrow.collapse.lesson_completed,
+.lesson_incomplete.list_arrow.expand,
+.learndash_nevigation_lesson_topics_list .topic-completed span,
+.learndash_nevigation_lesson_topics_list .topic-notcompleted span,
+.lesson_incomplete.list_arrow.collapse,
+.list_arrow.expand.lesson_completed {
+	background: none;
+}

@@ -1,0 +1,406 @@
+/*!---------------------------------------------------------------------------*\
+	ANIMATIONS
+\*----------------------------------------------------------------------------*/
+.mpc-animation {
+	opacity: 0;
+}
+
+.mpc-no-transition,
+.velocity-animating,
+.velocity-animating .mpc-transition {
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+.mpc-transition {
+	-webkit-transition: all .25s;
+	transition: all .25s;
+}
+
+.mpc-display--block {
+	display: block !important;
+}
+
+.mpc-align--left {
+	text-align: left;
+}
+.mpc-align--right {
+	text-align: right;
+}
+.mpc-align--center {
+	text-align: center;
+}
+
+/*!---------------------------------------------------------------------------*\
+	EFFECTS
+\*----------------------------------------------------------------------------*/
+.mpc-effect--brightness .mpc-item img {
+	filter: brightness(50%);
+	-webkit-filter: brightness(50%);
+	-moz-filter: brightness(50%);
+	-ms-filter: brightness(50%);
+	-o-filter: brightness(50%);
+}
+.mpc-effect--brightness .mpc-item:hover img {
+	filter: brightness(100%);
+	-webkit-filter: brightness(100%);
+	-moz-filter: brightness(100%);
+	-ms-filter: brightness(100%);
+	-o-filter: brightness(100%);
+}
+
+.mpc-effect--brightness.mpc-effect--reverse .mpc-item img{
+	filter: brightness(100%);
+	-webkit-filter: brightness(100%);
+	-moz-filter: brightness(100%);
+	-ms-filter: brightness(100%);
+	-o-filter: brightness(100%);
+}
+.mpc-effect--brightness.mpc-effect--reverse .mpc-item:hover img {
+	filter: brightness(50%);
+	-webkit-filter: brightness(50%);
+	-moz-filter: brightness(50%);
+	-ms-filter: brightness(50%);
+	-o-filter: brightness(50%);
+}
+
+.mpc-effect--contrast .mpc-item img{
+	filter: contrast(0.5);
+	-webkit-filter: contrast(0.5);
+	-moz-filter: contrast(0.5);
+	-ms-filter: contrast(0.5);
+	-o-filter: contrast(0.5);
+}
+.mpc-effect--contrast .mpc-item:hover img {
+	filter: contrast(1);
+	-webkit-filter: contrast(1);
+	-moz-filter: contrast(1);
+	-ms-filter: contrast(1);
+	-o-filter: contrast(1);
+}
+
+.mpc-effect--contrast.mpc-effect--reverse .mpc-item img{
+	filter: contrast(1);
+	-webkit-filter: contrast(1);
+	-moz-filter: contrast(1);
+	-ms-filter: contrast(1);
+	-o-filter: contrast(1);
+}
+.mpc-effect--contrast.mpc-effect--reverse .mpc-item:hover img {
+	filter: contrast(0.5);
+	-webkit-filter: contrast(0.5);
+	-moz-filter: contrast(0.5);
+	-ms-filter: contrast(0.5);
+	-o-filter: contrast(0.5);
+}
+
+.mpc-effect--grey-scale .mpc-item img{
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
+.mpc-effect--grey-scale .mpc-item:hover img {
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-ms-filter: grayscale(0);
+	-o-filter: grayscale(0);
+}
+.mpc-effect--grey-scale.mpc-effect--reverse .mpc-item img{
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-ms-filter: grayscale(0);
+	-o-filter: grayscale(0);
+}
+.mpc-effect--grey-scale.mpc-effect--reverse .mpc-item:hover img {
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
+
+.mpc-effect--hue .mpc-item img{
+	filter: hue-rotate(180deg);
+	-webkit-filter: hue-rotate(180deg);
+	-moz-filter: hue-rotate(180deg);
+	-ms-filter: hue-rotate(180deg);
+	-o-filter: hue-rotate(180deg);
+}
+.mpc-effect--hue .mpc-item:hover img {
+	filter: hue-rotate(0);
+	-webkit-filter: hue-rotate(0);
+	-moz-filter: hue-rotate(0);
+	-ms-filter: hue-rotate(0);
+	-o-filter: hue-rotate(0);
+}
+.mpc-effect--hue.mpc-effect--reverse .mpc-item img{
+	filter: hue-rotate(0);
+	-webkit-filter: hue-rotate(0);
+	-moz-filter: hue-rotate(0);
+	-ms-filter: hue-rotate(0);
+	-o-filter: hue-rotate(0);
+}
+.mpc-effect--hue.mpc-effect--reverse .mpc-item:hover img {
+	filter: hue-rotate(180deg);
+	-webkit-filter: hue-rotate(180deg);
+	-moz-filter: hue-rotate(180deg);
+	-ms-filter: hue-rotate(180deg);
+	-o-filter: hue-rotate(180deg);
+}
+
+.mpc-effect--invert .mpc-item img{
+	filter: invert(1);
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	-ms-filter: invert(1);
+	-o-filter: invert(1);
+}
+.mpc-effect--invert .mpc-item:hover img {
+	filter: invert(0);
+	-webkit-filter: invert(0);
+	-moz-filter: invert(0);
+	-ms-filter: invert(0);
+	-o-filter: invert(0);
+}
+.mpc-effect--invert.mpc-effect--reverse .mpc-item img{
+	filter: invert(0);
+	-webkit-filter: invert(0);
+	-moz-filter: invert(0);
+	-ms-filter: invert(0);
+	-o-filter: invert(0);
+}
+.mpc-effect--invert.mpc-effect--reverse .mpc-item:hover img {
+	filter: invert(1);
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	-ms-filter: invert(1);
+	-o-filter: invert(1);
+}
+
+.mpc-effect--saturate .mpc-item img{
+	filter: saturate(200%);
+	-webkit-filter: saturate(200%);
+	-moz-filter: saturate(200%);
+	-ms-filter: saturate(200%);
+	-o-filter: saturate(200%);
+}
+.mpc-effect--saturate .mpc-item:hover img {
+	filter: saturate(100%);
+	-webkit-filter: saturate(100%);
+	-moz-filter: saturate(100%);
+	-ms-filter: saturate(100%);
+	-o-filter: saturate(100%);
+}
+.mpc-effect--saturate.mpc-effect--reverse .mpc-item img{
+	filter: saturate(100%);
+	-webkit-filter: saturate(100%);
+	-moz-filter: saturate(100%);
+	-ms-filter: saturate(100%);
+	-o-filter: saturate(100%);
+}
+.mpc-effect--saturate.mpc-effect--reverse .mpc-item:hover img {
+	filter: saturate(200%);
+	-webkit-filter: saturate(200%);
+	-moz-filter: saturate(200%);
+	-ms-filter: saturate(200%);
+	-o-filter: saturate(200%);
+}
+
+.mpc-effect--sepia .mpc-item img{
+	filter: sepia(1);
+	-webkit-filter: sepia(1);
+	-moz-filter: sepia(1);
+	-ms-filter: sepia(1);
+	-o-filter: sepia(1);
+}
+.mpc-effect--sepia .mpc-item:hover img {
+	filter: sepia(0);
+	-webkit-filter: sepia(0);
+	-moz-filter: sepia(0);
+	-ms-filter: sepia(0);
+	-o-filter: sepia(0);
+}
+.mpc-effect--sepia.mpc-effect--reverse .mpc-item img{
+	filter: sepia(0);
+	-webkit-filter: sepia(0);
+	-moz-filter: sepia(0);
+	-ms-filter: sepia(0);
+	-o-filter: sepia(0);
+}
+.mpc-effect--sepia.mpc-effect--reverse .mpc-item:hover img {
+	filter: sepia(1);
+	-webkit-filter: sepia(1);
+	-moz-filter: sepia(1);
+	-ms-filter: sepia(1);
+	-o-filter: sepia(1);
+}
+
+/*!---------------------------------------------------------------------------*\
+	OTHER
+\*----------------------------------------------------------------------------*/
+.mpc-content-align,
+.mpc-content-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.mpc-content-align {
+	height: 100%;
+}
+
+.mpc-content-wrapper {
+	max-height: 100%;
+	overflow: auto;
+}
+.mpc-content-wrapper::-webkit-scrollbar {
+	width: 3px;
+}
+.mpc-content-wrapper::-webkit-scrollbar {
+	background: rgba(255, 255, 255, 0.2);
+}
+.mpc-content-wrapper::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.mpc-content-wrapper:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#page {
+	overflow: visible;
+}
+
+/* Slick */
+.mpc-carousel__wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+[data-mpcslick]:not(.slick-slider) {
+	display: -ms-flexbox;
+	-ms-flex-pack: center;
+
+	display: flex;
+	justify-content: center;
+}
+[data-mpcslick]:not(.slick-slider) > div {
+	margin: 0 !important;
+
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
+[data-mpcslick]:not(.slick-slider) + .mpc-navigation,
+.mpc-navigation + [data-mpcslick]:not(.slick-slider) {
+	display: none;
+}
+
+.slick-cloned.mpc-init,
+.slick-cloned.mpc-init *,
+.slick-cloned .mpc-init,
+.slick-cloned .mpc-init * {
+	visibility: visible !important;
+	opacity: 1;
+}
+
+/* Disable mobile navigation */
+@media only screen and (max-width: 768px) {
+	.mpc-navigation {
+		display: none;
+	}
+}
+
+/* Icon Mirror */
+.mpc-icon--mirror {
+	display: block !important;
+	-webkit-transform: translate(0, 0) rotateY( 180deg ) !important;
+	transform: translate(0, 0) rotateY( 180deg );
+}
+
+/* Placeholders */
+.mpc-image-placeholder {
+	background-position: center !important;
+	background-size: 64px !important;
+	background-image: url('../images/mpc-image-placeholder.png');
+	background-repeat: no-repeat;
+	background-color: #eeeeee;
+}
+
+/* prettyPhoto styling for small screens */
+@media (max-width: 767px)
+{
+	.pp_pic_holder.pp_default {
+		width: 96%!important;
+		left: 2%!important;
+		overflow: hidden;
+	}
+	div.pp_default .pp_content_container .pp_left {
+		padding-left: 0!important;
+	}
+	div.pp_default .pp_content_container .pp_right {
+		padding-right: 0!important;
+	}
+	.pp_content {
+		width: 100%!important;
+		height: auto!important;
+	}
+	.pp_fade {
+		width: 100%!important;
+		height: 100%!important;
+	}
+	a.pp_expand,
+	a.pp_contract,
+	.pp_hoverContainer,
+	.pp_gallery,
+	.pp_top,
+	.pp_bottom {
+		display: none!important;
+	}
+	#pp_full_res img {
+		width: 100%!important;
+		height: auto!important;
+		vertical-align: middle;
+	}
+	.pp_details {
+		display: none !important;
+	}
+	a.pp_close {
+		right: 10px!important;
+		top: 10px!important;
+	}
+}
+
+/* Magnific Popup opacity override */
+.mfp-wrap * {
+	opacity: 1;
+}
+
+/* Row/Column Link block notices */
+.mpc-notice {
+	background: #E67D7D;
+	color: #fff;
+	padding: 1em 2em;
+	font-style: italic;
+}
+.mpc-notice a {
+	font-style: italic;
+	color: #fff !important;
+	border-bottom: 1px dotted;
+}
+.mpc-notice a:hover {
+	color: #eee !important;
+}
+
+/* RTL test styles */
+.rtl .slick-slide,
+[dir="rtl"] .slick-slide {
+	float: right;
+}
+.rtl .mpc-nav__arrow,
+[dir="rtl"] .mpc-nav__arrow {
+	float: left;
+}

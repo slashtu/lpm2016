@@ -1,0 +1,73 @@
+.learndash .topic-completed span:before,
+#leardash_profile .topic-notcompleted span:before,
+.learndash .topic-notcompleted span:before { 
+	content: "\f14a";
+	font-family: FontAwesome;
+	float: right;
+	font-size: 24px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 20px;
+	text-shadow: 1px 1px 0px rgba(0,0,0,.25);
+}
+
+.list_arrow.expand.lesson_completed:before { 
+	content: "\f150";
+  	font-size: 16px;
+	font-family: FontAwesome;
+}
+
+.learndash_nevigation_lesson_topics_list .topic_item a:before {
+	content: "\f14a";
+	font-family: FontAwesome;
+	font-size: 12px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.learndash a.completed:before,
+#learndash_profile a.completed:before { 
+	content: "\f14a";
+	font-family: FontAwesome;
+	float: right;
+	font-size: 42px;
+	display: inline-block;
+	margin: 0 15px 15px 0;
+}
+
+
+.learndash .notcompleted:before,
+#learndash_profile .notcompleted:before {
+	content: "\f14a";
+	font-family: FontAwesome;
+	float: right;
+	font-size: 42px;
+	display: inline-block;
+	opacity: 0.5;
+	margin: 0 15px 15px 0;
+}
+
+.list_arrow.expand:before,
+#learndash_profile .list_arrow.expand:before
+ {
+  color: #2f4050;
+  content: "\f078";
+  font-family: FontAwesome;
+  font-size: 22px;
+}
+
+.list_arrow.collapse:before,
+#learndash_profile .list_arrow.collapse:before {
+    color: #2f4050;
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 22px;
+}
+
+#learndash_profile .passed_icon:before {
+	display: inline-block;
+	content: "\f14a";
+	font-family: FontAwesome;
+	font-size: 14px;
+	color: #036564;
+}

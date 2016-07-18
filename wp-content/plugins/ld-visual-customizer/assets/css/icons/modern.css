@@ -1,0 +1,101 @@
+
+/* Icon Resets */
+
+.learndash_nevigation_lesson_topics_list .list_arrow.collapse,
+.learndash .notcompleted,
+#learndash_profile .notcompleted,
+.list_arrow.expand.lesson_completed,
+.learndash_nevigation_lesson_topics_list .topic-completed span,
+.lesson_incomplete.list_arrow.expand,
+.learndash_nevigation_lesson_topics_list .topic-notcompleted span,
+.learndash .completed,
+#learndash_profile .completed,
+.learndash .topic-notcompleted span,
+#learndash_profile .list_arrow,
+#learndash_profile .list_arrow.collapse {
+    background-image: none; 
+}
+
+.list_arrow.expand.lesson_completed:before { 
+	content: "\f0ab";
+	font-family: FontAwesome;
+}
+
+.learndash_nevigation_lesson_topics_list .topic_item a { 
+	position: relative;
+	padding-left: 10px;
+	display: block;
+}
+
+.learndash_nevigation_lesson_topics_list .topic_item a:before {
+	content: "\f058";
+	font-family: FontAwesome;
+	font-size: 12px;
+	position: absolute;
+	left: 0;
+	top: 4px;
+}
+
+.lesson_incomplete.list_arrow.expand:before { 
+	content: "\f0ab";
+	font-family: FontAwesome;
+	font-size: 18px;
+	display: inline-block;
+}
+
+.learndash a.completed:after,
+#learndash_profile a.completed:after { 
+	content: "\f058";
+	font-family: FontAwesome;
+	float: right;
+	font-size: 42px;
+	display: inline-block;
+}
+
+.learndash .notcompleted:before,
+#learndash_profile .notcompleted:before {
+	content: "\f058";
+	font-family: FontAwesome;
+	float: right;
+	font-size: 42px;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+/* LIST ARROWS */
+
+.list_arrow.collapse,
+.list_arrow.expand { 
+	position: relative;
+	padding-left: 20px;
+}
+
+.list_arrow.expand:before,
+#learndash_profile .list_arrow.expand:before {
+  display: absolute;
+  left: 0;
+  content: "\f0ab";
+  font-family: FontAwesome;
+  font-size: 22px;
+}
+
+.list_arrow.collapse:before,
+#learndash_profile .list_arrow.collapse:before {
+	display: absolute;
+	left: 0;
+  	content: "\f0a9";
+    font-family: FontAwesome;
+    font-size: 22px;
+}
+
+.learndash .topic-completed span:before,
+#leardash_profile .topic-notcompleted span:before,
+.learndash .topic-notcompleted span:before { 
+	content: "\f058";
+	font-family: FontAwesome;
+	float: right;
+	font-size: 24px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 20px;
+}

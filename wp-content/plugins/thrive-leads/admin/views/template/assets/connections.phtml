@@ -1,0 +1,346 @@
+<ul class="tvd-collection asset-connection-list-item tve-leads-test-connection-<#= connection #> <# if(connection == active) {#> tve-leads-table-selected <# }#>">
+	<li class="tvd-collection-item tve-form-wrapper">
+		<div class="tvd-row tvd-collapse">
+			<div class="tvd-col tvd-s3">
+				<div class="tvd-vertical-align">
+					<img class="tve-asset-connection-img"
+					     src="<?php echo plugin_dir_url( dirname( dirname( dirname( __FILE__ ) ) ) ); ?>img/<#= connection #>-logo-small.png">
+					<strong
+						class="tve-leads-connection-name tvd-capitalize"><?php echo __( "<#= connection #>", "thrive-leads" ); ?></strong>
+				</div>
+			</div>
+			<div class="tvd-col tvd-s4">
+				<div class="tvd-row">
+					<div class="tvd-col tvd-l4">
+						<div class="tvd-switch tvd-vertical-align">
+							<label class="<# if(connection == active) {#> tvd-switch-disabled <# }#>">
+								<input type="checkbox" data="<#= connection #>"
+								<# if(connection == active) {#> checked="checked"
+									<# }#>
+										value="1" class="tve-leads-connection-setting-change" autocomplete="off">
+										<span class="tvd-lever"></span>
+							</label>
+						</div>
+					</div>
+					<div class="tvd-col tvd-l8">
+						<strong class="tvd-vertical-align">
+							<?php echo __( "Connected,", "thrive-leads" ); ?>
+							<# if(connection == active) {#><?php echo __( "active", "thrive-leads" ); ?>
+								<# } else {#> <?php echo __( "inactive", "thrive-leads" ); ?>
+									<# } #>
+						</strong>
+					</div>
+				</div>
+			</div>
+			<div class="tvd-col tvd-s4">
+		        <span class="tve-leads-connection-test-<#= connection #> tvd-vertical-align">
+		            <span class="tvd-icon-exchange tvd-text-gray"></span>
+		            <a id="tve-asset-group-test" class="tve-asset-group-test tvd-underline" data="<#= connection #>"
+		               title="Test connection"
+		               href="javascript:void(0)">
+			            <?php echo __( "Test connection", "thrive-leads" ); ?>
+		            </a>
+		        </span>
+			</div>
+			<div class="tvd-col tvd-s1">
+				<div class="tvd-vertical-align">
+					<span class="tve-asset-group-test-result tvd-left"></span>
+					<a href="javascript:void(0)" id="tve-leads-delivery-<#= connection #>-edit"
+					   class="tve-leads-connection-edit tve-leads-connection-edit-<#= connection #> tvd-right">
+						<span class="tvd-icon-pencil"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<span class="tve-leads-test-response"></span>
+	</li>
+</ul>
+<# if(connection == 'mandrill') { #>
+	<div class="tve-leads-delivery-<#= connection #>-edit tve-leads-delivery-connection" style="display: none;">
+		<p>
+			<?php echo __( 'Enter your Mandrill API key below', 'thrive-leads' ) ?>.
+			<a class="tl-play-link wistia-popover[height=450,playerColor=2bb914,width=800]"
+			   href="//fast.wistia.net/embed/iframe/s2s94z4w66?popover=true">
+				<?php echo __( 'Click Here', 'thrive-leads' ) ?></a> <?php echo __( 'for instructions on how to get your API key', 'thrive-leads' ) ?>
+			.
+		</p>
+		<div class="tvd-row">
+			<div class="tvd-col tvd-s10 tvd-offset-s1">
+				<div class="tvd-input-field">
+					<input id="tve-leads-email-mandrill" class="tve-leads-email-mandrill" type="text" name="connection[email]"
+					       value="<#= connection_instance.email #>">
+					<label for="tve-leads-email-mandrill">
+						<?php echo __( "Mandrill-approved email address", TVE_DASH_TRANSLATE_DOMAIN ) ?>
+					</label>
+				</div>
+				<div class="tvd-input-field">
+					<input type="text"
+					       class="tve-leads-key-mandrill" name="connection[key]" id="tve-leads-key-mandrill"
+					       value="<#= connection_instance.key #>"/>
+					<label for="tve-leads-key-mandrill"
+					       class="tvd-active"><?php echo __( "API key", "thrive-leads" ) ?></label>
+				</div>
+			</div>
+		</div>
+		<div class="tvd-row">
+			<div class="tvd-col tvd-s8 tvd-offset-s2">
+				<button
+					class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-full-btn tve-leads-submit-connection-edit"
+					value="<#= connection #>"><?php echo __( "Save Mandrill API Key", "thrive-leads" ) ?></button>
+			</div>
+		</div>
+		<div class="tvd-v-spacer vs-3"></div>
+		<button
+			class="tvd-btn-flat-blue tvd-btn-flat tve-leads-back-api-edit tvd-waves-effect">&lsaquo; <?php echo __( "Go Back", "thrive-cb" ) ?></button>
+	</div>
+	<# } else if(connection == 'postmark') { #>
+		<div class="tve-leads-delivery-<#= connection #>-edit tve-leads-delivery-connection" style="display: none;">
+			<p>
+				<?php echo __( 'Enter your Postmark API key below', 'thrive-leads' ) ?>.
+				<a class="tl-play-link wistia-popover[height=450,playerColor=2bb914,width=800]"
+				   href="//fast.wistia.net/embed/iframe/4wlzzbsk34?popover=true"><?php echo __( 'Click Here', 'thrive-leads' ) ?></a> <?php echo __( 'for instructions on how to get your API key', 'thrive-leads' ) ?>
+				.
+			</p>
+			<?php $admin_email = get_option( 'admin_email' ); ?>
+			<p>
+				<?php echo __( 'Postmark requires your email to be verified before allowing any emails to be sent. Please be sure that the email you set here matches the email you confirmed on the postmark website.', 'thrive-leads' ) ?>
+			</p>
+			<div class="tvd-row">
+				<div class="tvd-col tvd-s10 tvd-offset-s1">
+					<div class="tvd-input-field">
+						<input type="text"
+						       class="tve-leads-email-postmark" name="connection[email]" id="tve-leads-email-postmark"
+						       value="<#= connection_instance.email #>"/>
+						<label for="tve-leads-email-postmark"
+						       class="tvd-active"><?php echo __( "Postmark-approved email address", "thrive-leads" ) ?></label>
+					</div>
+					<div class="tvd-input-field">
+						<input type="text" id="tve-leads-key-postmark"
+						       class="tve-leads-key-postmark" name="connection[key]"
+						       value="<#= connection_instance.key #>"/>
+						<label for="tve-leads-key-postmark"
+						       class="tvd-active"><?php echo __( "API key", "thrive-leads" ) ?></label>
+					</div>
+				</div>
+			</div>
+			<div class="tvd-row">
+				<div class="tvd-col tvd-s8 tvd-offset-s2">
+					<button
+						class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-full-btn tve-leads-submit-connection-edit"
+						value="<#= connection #>"><?php echo __( "Save Postmark API Key", "thrive-leads" ) ?></button>
+				</div>
+			</div>
+			<div class="tvd-v-spacer vs-3"></div>
+			<button
+				class="tvd-btn-flat-blue tvd-btn-flat tve-leads-back-api-edit tvd-waves-effect">&lsaquo; <?php echo __( "Go Back", "thrive-leads" ) ?></button>
+		</div>
+		<# } else if(connection == 'mailgun') { #>
+			<div class="tve-leads-delivery-<#= connection #>-edit tve-leads-delivery-connection" style="display: none;">
+				<p>
+					<?php echo __( 'Enter your Mailgun API key below', 'thrive-leads' ) ?>.
+					<a class="tl-play-link wistia-popover[height=450,playerColor=2bb914,width=800]"
+					   href="//fast.wistia.net/embed/iframe/4wlzzbsk34?popover=true"><?php echo __( 'Click Here', 'thrive-leads' ) ?></a> <?php echo __( 'for instructions on how to get your API key', 'thrive-leads' ) ?>
+					.
+				</p>
+				<p><?php echo __( 'Mailgun requires a domain name to be setup in order to send emails. Please be sure that the domain you set matches the domain on the mailgun website. A verification Email will be sent to your admin email, please make sure you have a valid email set.', 'thrive-leads' ) ?></p>
+				<div class="tvd-row">
+					<div class="tvd-col tvd-s10 tvd-offset-s1">
+						<div class="tvd-input-field">
+							<input type="text" id="tve-leads-domain-mailgun"
+							       class="tve-leads-domain-mailgun" name="connection[domain]"
+							       value="<#= connection_instance.domain #>"/>
+							<label for="tve-leads-domain-mailgun" class="tvd-active">
+								<?php echo __( "Mailgun-approved domain name", "thrive-leads" ) ?>
+							</label>
+						</div>
+						<div class="tvd-input-field">
+							<input type="text" id="tve-leads-key-mailgun"
+							       class="tve-leads-key-mailgun" name="connection[key]"
+							       value="<#= connection_instance.key #>"/>
+							<label for="tve-leads-key-mailgun" class="tvd-active">
+								<?php echo __( "API key", "thrive-leads" ) ?>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="tvd-row">
+					<div class="tvd-col tvd-s8 tvd-offset-s2">
+						<button
+							class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-full-btn  tve-leads-submit-connection-edit"
+							value="<#= connection #>"><?php echo __( "Save AWS SES API Key", "thrive-leads" ) ?></button>
+					</div>
+				</div>
+				<div class="tvd-v-spacer vs-3"></div>
+				<button
+					class="tvd-btn-flat-blue tvd-btn-flat tve-leads-back-api-edit tvd-waves-effect">&lsaquo; <?php echo __( "Go Back", "thrive-cb" ) ?></button>
+			</div>
+			<# } else if(connection == 'sparkpost') { #>
+				<div class="tve-leads-delivery-<#= connection #>-edit tve-leads-delivery-connection"
+				     style="display: none;">
+					<p>
+						<?php echo __( 'Enter your SparkPost API key below', 'thrive-leads' ) ?>.
+					</p>
+					<p><?php echo __( 'SparkPost requires a domain name to be setup in order to send emails. Please be sure that the domain you set matches the domain on the SparkPost website. A verification Email will be sent to your admin email, please make sure you have a valid email set.', 'thrive-leads' ) ?></p>
+					<div class="tvd-row">
+						<div class="tvd-col tvd-s10 tvd-offset-s1">
+							<div class="tvd-input-field">
+								<input type="text" id="tve-leads-domain-sparkpost"
+								       class="tve-leads-domain-sparkpost" name="connection[domain]"
+								       value="<#= connection_instance.domain #>"/>
+								<label for="tve-leads-domain-sparkpost" class="tvd-active">
+									<?php echo __( "Spark-approved domain name", "thrive-leads" ) ?>
+								</label>
+							</div>
+							<div class="tvd-input-field">
+								<input type="text" id="tve-leads-key-sparkpost"
+								       class="tve-leads-key-sparkpost" name="connection[key]"
+								       value="<#= connection_instance.key #>"/>
+								<label for="tve-leads-key-sparkpost" class="tvd-active">
+									<?php echo __( "API key", "thrive-leads" ) ?>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="tvd-row">
+						<div class="tvd-col tvd-s8 tvd-offset-s2">
+							<button
+								class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-full-btn  tve-leads-submit-connection-edit"
+								value="<#= connection #>"><?php echo __( "Save SparkPost API Key", "thrive-leads" ) ?></button>
+						</div>
+					</div>
+					<div class="tvd-v-spacer vs-3"></div>
+					<button
+						class="tvd-btn-flat-blue tvd-btn-flat tve-leads-back-api-edit tvd-waves-effect">&lsaquo; <?php echo __( "Go Back", "thrive-cb" ) ?></button>
+				</div>
+				<# } else if(connection == 'awsses') { #>
+					<div class="tve-leads-delivery-<#= connection #>-edit tve-leads-delivery-connection"
+					     style="display: none;">
+						<?php $admin_email = get_option( 'admin_email' ); ?>
+						<p><?php echo __( 'Enter your Amazon Web Services Simple Email Service API key below', 'thrive-leads' ) ?>
+							.
+							<a class="tl-play-link wistia-popover[height=450,playerColor=2bb914,width=800]"
+							   href="//fast.wistia.net/embed/iframe/4wlzzbsk34?popover=true"><?php echo __( 'Click Here', 'thrive-leads' ) ?></a> <?php echo __( 'for instructions on how to get your API key', 'thrive-leads' ) ?>
+							.</p>
+						<p><?php echo __( 'Amazon Web Services Simple Email Service requires your email to be verified before allowing any emails to be sent. Please be sure that the email you set here matches the email you confirmed on the Amazon Web Services Simple Email Service website.', 'thrive-leads' ) ?></p>
+						<p><?php echo __( 'Emails will not be sent if Amazon Web Services Simple Email Service is on sandbox mode. If so please contact Amazon Web Services Simple Email Service to increase email limits and to be removed from sandbox. More details ', 'thrive-leads' ); ?>
+							<a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html"
+							   target="_blank">here</a>.</p>
+						<div class="tvd-row">
+							<div class="tvd-col tvd-s10 tvd-offset-s1">
+								<div class="tvd-input-field">
+									<input type="text" id="tve-leads-email-awsses"
+									       class="tve-leads-email-awsses" name="connection[email]"
+									       value="<#= connection_instance.email #>"/>
+									<label for="tve-leads-email-awsses" class="tvd-active">
+										<?php echo __( "AWS SES-approved email address", "thrive-leads" ) ?>
+									</label>
+								</div>
+								<div class="tvd-input-field">
+									<input type="text" id="tve-leads-secretkey-awsses"
+									       class="tve-leads-secretkey-awsses" name="connection[secretkey]"
+									       value="<#= connection_instance.secretkey #>"/>
+									<label for="tve-leads-secretkey-awsses" class="tvd-active">
+										<?php echo __( "Secret key", "thrive-leads" ) ?>
+									</label>
+								</div>
+								<div class="tvd-input-field">
+									<input type="text" id="tve-leads-key-awsses"
+									       class="tve-leads-key-awsses" name="connection[key]"
+									       value="<#= connection_instance.key #>"/>
+									<label for="tve-leads-key-awsses" class="tvd-active">
+										<?php echo __( "API key", "thrive-leads" ) ?>
+									</label>
+								</div>
+								<div class="tvd-input-field">
+									<select class="tve-leads-country-awsses" type="text" name="connection[country]"
+									        id="tve-leads-country-awsses">
+										<option value="ireland"
+										<# if(connection_instance.country == 'ireland') { #> selected
+											<# } #>><?php echo __( "Ireland", "thrive-cb" ) ?></option>
+												<option value="useast"
+												<# if(connection_instance.country == 'useast') { #> selected
+													<# } #>
+														><?php echo __( "US East (N. Vigrinia)", "thrive-cb" ) ?></option>
+														<option value="uswest"
+														<# if(connection_instance.country == 'uswest') { #> selected
+															<# } #>
+																><?php echo __( "US West (N. Oregon)", "thrive-cb" ) ?></option>
+									</select>
+									<label
+										for="tve-leads-country-awsses"><?php echo __( "Email zone", "thrive-cb" ) ?></label>
+								</div>
+							</div>
+						</div>
+						<div class="tvd-row">
+							<div class="tvd-col tvd-s8 tvd-offset-s2">
+								<button
+									class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-full-btn tve-leads-submit-connection-edit"
+									value="<#= connection #>"><?php echo __( "Save AWS SES API key", "thrive-leads" ) ?></button>
+							</div>
+							<div>
+								<div class="tvd-v-spacer vs-3"></div>
+								<button
+									class="tvd-btn-flat-blue tvd-btn-flat tve-leads-back-api-edit tvd-waves-effect">&lsaquo; <?php echo __( "Go Back", "thrive-leads" ) ?></button>
+								</td>
+							</div>
+							<# } else if(connection == 'sendinblueemail') { #>
+								<div class="tve-leads-delivery-<#= connection #>-edit tve-leads-delivery-connection"
+								     style="display: none;">
+									<p><?php echo __( 'Enter your SendinBlue API key below', 'thrive-leads' ) ?>.
+										<a class="tl-play-link wistia-popover[height=450,playerColor=2bb914,width=800]"
+										   href="//fast.wistia.net/embed/iframe/4wlzzbsk34?popover=true"><?php echo __( 'Click Here', 'thrive-leads' ) ?></a> <?php echo __( 'for instructions on how to get your API key', 'thrive-leads' ) ?>
+										.</p>
+									<p><?php echo __( 'SendinBlue requires SMTP activation before allowing the SendMail API to work. If SMTP is not activated yet on your account please contact SendinBlue by Email at contact@sendinblue.com for SMTP activation.', 'thrive-leads' ) ?></p>
+									<div class="tvd-row">
+										<div class="tvd-col tvd-s10 tvd-offset-s1">
+											<div class="tvd-input-field">
+												<input type="text" id="tve-leads-key-sendinblueemail"
+												       class="tve-leads-key-sendinblueemail" name="connection[key]"
+												       value="<#= connection_instance.key #>"/>
+												<label for="tve-leads-key-sendinblueemail"
+												       class="tvd-active"><?php echo __( "API key", "thrive-leads" ) ?></label>
+											</div>
+										</div>
+									</div>
+									<div class="tvd-row">
+										<div class="tvd-col tvd-s8 tvd-offset-s2">
+											<button
+												class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-full-btn tve-leads-submit-connection-edit"
+												value="<#= connection #>"><?php echo __( "Save SendinBlue API Key", "thrive-leads" ) ?></button>
+										</div>
+									</div>
+									<div class="tvd-v-spacer vs-3"></div>
+									<button
+										class="tvd-btn-flat-blue tvd-btn-flat tve-leads-back-api-edit tvd-waves-effect">&lsaquo; <?php echo __( "Go Back", "thrive-leads" ) ?></button>
+								</div>
+								<# } else if(connection == 'sendgridemail') { #>
+									<div class="tve-leads-delivery-<#= connection #>-edit tve-leads-delivery-connection"
+									     style="display: none;">
+										<p><?php echo __( 'Enter your SendGrid API key below', 'thrive-leads' ) ?>.
+											<a class="tl-play-link wistia-popover[height=450,playerColor=2bb914,width=800]"
+											   href="//fast.wistia.net/embed/iframe/4wlzzbsk34?popover=true"><?php echo __( 'Click Here', 'thrive-leads' ) ?></a> <?php echo __( 'for instructions on how to get your API key', 'thrive-leads' ) ?>
+											.</p>
+										<div class="tvd-row">
+											<div class="tvd-col tvd-s10 tvd-offset-s1">
+												<div class="tvd-input-field">
+													<input type="text" id="tve-leads-key-sendgridemail"
+													       class="tve-leads-key-sendgridemail" name="connection[key]"
+													       value="<#= connection_instance.key #>"/>
+													<label for="tve-leads-key-sendgridemail"
+													       class="tvd-active"><?php echo __( "API key", "thrive-leads" ) ?></label>
+												</div>
+											</div>
+										</div>
+										<div class="tvd-row">
+											<div class="tvd-col tvd-s8 tvd-offset-s2">
+												<button
+													class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-full-btn tve-leads-submit-connection-edit"
+													value="<#= connection #>"><?php echo __( "Save SendGrid API Key", "thrive-leads" ) ?></button>
+											</div>
+										</div>
+										<div class="tvd-v-spacer vs-3"></div>
+										<button
+											class="tvd-btn-flat-blue tvd-btn-flat tve-leads-back-api-edit tvd-waves-effect">&lsaquo; <?php echo __( "Go Back", "thrive-leads" ) ?></button>
+									</div>
+									<# }#>
+

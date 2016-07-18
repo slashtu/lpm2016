@@ -1,0 +1,267 @@
+# Copyright (C) 2015 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: "
+"https://github.com/yoast/google-analytics-premium/issues\n"
+"POT-Creation-Date: 2015-11-26 13:48:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoast Translate Team <translations@yoast.com>\n"
+"Language-Team: Yoast Translate <translations@yoast.com>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:75
+msgid ""
+"%1$sWarning!%2$s Deactivating Wordpress SEO will stop your SEO custom "
+"dimensions from working in Google Analytics. Please visit your %3$sGoogle "
+"Analytics settings%4$s to see which custom dimensions have been disabled."
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:118
+msgid "Logged in"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:120
+msgid ""
+"The amount of views on posts and pages by logged in users vs non logged in "
+"users. %1$s[Learn more]%2$s"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:124
+msgid "Number of logged in sessions"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:129
+msgid "Post type"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:131
+msgid ""
+"The amount of views on posts and pages grouped by post type. %1$s[Learn "
+"more]%2$s"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:135
+msgid "Most popular post types"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:140
+msgid "Author"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:142
+msgid ""
+"The amount of views on posts and pages grouped by author. %1$s[Learn "
+"more]%2$s"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:146
+msgid "Most popular authors"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:151
+msgid "Category"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:153
+msgid ""
+"The amount of views on posts and pages grouped by category. %1$s[Learn "
+"more]%2$s"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:157
+msgid "Most popular categories"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:162
+msgid "Published at"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:164
+msgid ""
+"The amount of views on posts and pages grouped by their publication time. "
+"%1$s[Learn more]%2$s"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:168
+msgid "Best publication time"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:173
+msgid "Tags"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:174
+msgid ""
+"The amount of views on posts and pages grouped by tags. <a "
+"href=\"http://en.support.wordpress.com/posts/tags/\" "
+"target=\"_blank\">[Learn more]</a>"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:175
+msgid "Most popular tags"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:196
+msgid "SEO Score"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:198
+msgid ""
+"The amount of views on posts and pages grouped by SEO score. %1$s[Learn "
+"more]%2$s"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:202
+msgid "Best SEO Score"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:207
+msgid "Focus Keyword"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:209
+msgid ""
+"The amount of views on posts and pages grouped by focus keyword. %1$s[Learn "
+"more]%2$s"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:213
+msgid "Most popular focus keywords"
+msgstr ""
+
+#: admin/classes/class-ga-admin-custom-dimensions.php:236
+msgid "The custom dimension ID must be unique for each dimension."
+msgstr ""
+
+#: admin/classes/class-ga-advanced-presenter.php:29
+msgid ""
+"This requires integration of your Analytics and AdSense account, for help, "
+"%1$slook here%2$s."
+msgstr ""
+
+#: admin/classes/class-ga-advanced-presenter.php:31
+#: admin/pages/advanced-tab.php:12
+msgid "Google Adsense tracking"
+msgstr ""
+
+#: admin/dashboards/class-admin-dashboards-premium.php:98
+msgid "Click to fetch the latest data from Google Analytics."
+msgstr ""
+
+#: admin/dashboards/class-admin-dashboards-premium.php:106
+msgid "The Google Analytics dashboards data was updated successfully."
+msgstr ""
+
+#: admin/dashboards/class-admin-dashboards-premium.php:154
+msgid "Sessions"
+msgstr ""
+
+#: admin/dashboards/pages/custom-dimensions.php:9
+msgid "Select a custom dimension"
+msgstr ""
+
+#: admin/dashboards/pages/custom-dimensions.php:18
+msgid ""
+"You have not added any custom dimensions yet. %sAdd them here%s to enable "
+"this feature."
+msgstr ""
+
+#: admin/pages/advanced-tab.php:7 admin/pages/custom-metrics-page.php:12
+msgid ""
+"This requires integration of your Analytics and AdSense account. For how to "
+"do this, see %1$sthis help page%2$s."
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:7
+msgid "Learn more"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:13
+msgid ""
+"Visit our knowledge base to learn more about %1$show to setup%3$s and "
+"%2$show to use%3$s custom dimensions in Google Analytics."
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:22
+msgid ""
+"Read our %1$sblogposts on custom dimensions%2$s to learn more about what "
+"they are and how you could use them."
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:31
+msgid "Add/remove custom dimensions"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:35
+msgid "Type"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:36
+msgid "Custom Dimension ID"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:81
+#: admin/pages/custom-dimensions-page.php:127
+msgid "Delete"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:88
+msgid "Add new custom dimension"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:93
+msgid "You are using %1$s out of %2$s custom dimensions."
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:99
+msgid "The custom dimension ID already exists!"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:105
+msgid "SEO dimensions"
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:111
+msgid ""
+"You need to install %1$sWordPress SEO by Yoast%2$s to be able to use the "
+"%3$sSEO Score%4$s and %3$sFocus keyword%4$s custom dimensions. If you're "
+"already running another SEO plugin, WordPress SEO can import its meta data."
+msgstr ""
+
+#: admin/pages/custom-dimensions-page.php:144
+msgid "%1$sUniversal tracking%2$s is not enabled"
+msgstr ""
+
+#: admin/pages/custom-metrics-page.php:9 admin/pages/custom-metrics-tab.php:7
+msgid "Custom Metrics"
+msgstr ""
+
+#: admin/pages/custom-metrics-page.php:17
+msgid "Google Metrics"
+msgstr ""
+
+#: class-ga-premium.php:131
+msgid "Loading"
+msgstr ""
+
+#: frontend/classes/class-ga-frontend-custom-dimensions.php:296
+#. translators: Default value shown in Google Analytics when no focus keyword
+#. has been set. Use underscores to differentiate from normal focus keywords.
+msgid "focus_keyword_not_set"
+msgstr ""

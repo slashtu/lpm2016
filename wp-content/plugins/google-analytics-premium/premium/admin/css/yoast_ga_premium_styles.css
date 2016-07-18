@@ -1,0 +1,14 @@
+.ga-premium-inactive-custom-dimension {
+	color: #dd3d36;
+}
+
+#ga-wpseo-inactive {
+	max-width: 600px;
+	padding-left: 10px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.error_custom_dimension {
+	border: 1px solid red !important;
+}

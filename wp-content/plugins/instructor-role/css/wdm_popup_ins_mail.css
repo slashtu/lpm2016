@@ -1,0 +1,97 @@
+#wdm_tbl_staff_mail {
+    /*display: none;*/
+    padding: 10px;
+}
+
+/*
+support issue #7572
+*/
+#wdm_staff_mail_subject,
+#wdm_staff_mail_body,
+#wdm_staff_mail_id {
+    width: 100%;
+}
+
+#wdm_tbl_staff_mail td:first-child {
+    width: 25%;
+}
+/*
+support issue #7572
+*/
+#wdm_close_pop {
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 3px;
+}
+#wdm_close_pop:hover {
+    color: #0074a2;
+}
+
+/*STYLES FOR CSS POPUP*/
+
+
+#blanket {
+   background-color:#111;
+   opacity: 0.65;
+   *background:none;
+   position:absolute;
+   z-index: 9001;
+   top:0px;
+   left:0px;
+   width:100%;
+}
+
+#popUpDiv {
+    position:absolute;
+    width:50%;
+    height:400px;
+    z-index: 9002;
+}
+
+#popUpDiv a {position:relative; top:20px; left:20px}
+
+@media all and (max-width: 768px) and (min-width: 320px){
+    #popUpDiv{
+       width:100%;
+       left : 1% !important;
+    }
+    
+}
+
+#instructor_email_sub,#wp-instructor_email_message-wrap {
+    width:90%;
+}
+
+
+/* Available variable for instructor in email template */
+#instructor_email_template_variable{
+display:block;
+cursor: default;
+}
+#instructor_email_template_variable span{
+display:block;
+}
+
+
+/* wl8 changes */
+.wl8qcn-email-form{
+  margin: 0 0 0 20px;
+}
+
+.wl8qcn-email-heading{
+
+}
+
+.wl8qcn-email-sub, .wl8qcn-email-content{
+  margin-bottom: 10px;
+}
+.wl8qcn-email-sub > label, .wl8qcn-email-content > label{
+  display: block;
+  font-weight: bold;
+}
+
+ #instructor_email_template_variable{
+  margin-left: 10px;  
+ }
