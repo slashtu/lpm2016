@@ -168,9 +168,9 @@ function ld_course_list( $attr ) {
 
 		}
 
-		$categorydropdown = "<div id='ld_categorydropdown'><span>" . __( 'Categories', 'learndash' ) . '</span>';
+		$categorydropdown = "<div id='ld_categorydropdown'><span>" . __( 'Courses', 'learndash' ) . '</span>';
 		$categorydropdown.= "<form method='get'><select name='catid' onChange='jQuery(\"#ld_categorydropdown form\").submit()'>";
-		$categorydropdown.= "<option value=''>" . __( 'Select category', 'learndash' ) . '</option>';
+		$categorydropdown.= "<option value=''>" . __( 'All', 'learndash' ) . '</option>';
 
 		foreach( $cats as $cat ) {
 			$selected =( empty( $_GET['catid'] ) || $_GET['catid'] != $cat['id'] ) ? '' : 'selected="selected"';

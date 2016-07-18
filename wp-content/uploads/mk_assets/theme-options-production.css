@@ -176,7 +176,7 @@ a:hover {
 	font-size: 24px;
 	color: #404040;
 	font-weight: 600;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 .master-holder h4
